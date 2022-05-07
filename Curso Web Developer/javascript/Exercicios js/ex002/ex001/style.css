@@ -1,0 +1,9 @@
+body{
+    background-color: rgb(165, 220, 220);
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: crimson;
+    font-size: 30px;
+}
