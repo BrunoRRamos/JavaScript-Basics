@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Primeiro Js</title>
+    <title>Treinando DOM Js</title>
     <link rel="stylesheet" href="style.css">
     
 </head>
 <body>
-    <p>Olá, Mundo!</p>
+
+    <h1>Treinando <strong>DOM</strong></h1>
+    <p>Primeiro vez utilizando <strong>DOM</strong></p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+     A maiores nostrum minima, suscipit, voluptas voluptatibus tempora dolor totam eligendi,
+     perferendis quos doloribus! Voluptatibus reprehenderit eligendi numquam accusantium dolore recusandae iure!</p>
+    <div id="msg">Clique</div>
+
     <script>
-        //Js Das Windows Alert
-        var n1 = Number(window.prompt('Primeiro Número'))
-        var n2 = Number(window.prompt('Segundo Número'))
-        var soma = n1 + n2
-        window.alert(`A soma deu : ${soma}`)
+       var p1 = document.getElementById("msg")
+       p1.style.color = 'blue'
+       window.document.write(p1.innerText)
     </script>
 </body>
 </html>
