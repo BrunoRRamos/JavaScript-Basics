@@ -1,0 +1,32 @@
+body{
+    background-color: #E8F1F2;
+}
+
+h2{
+    background-color: #1B98E0;
+    border-radius:  10px;
+    width: 230px;
+    text-align: auto;
+}
+
+h3{
+    background-color: #237BA0;
+    width: 190px;
+    border-radius:  10px;
+}
+
+p, blockquote{
+    margin-left: 13px;
+    background-color: white;
+    border-radius: 10px;
+    width: 540px;
+    text-align: 20px;
+}
+
+#test_tag{
+    background-color: #13293D;
+    color: white;
+    width:px;
+    height: 40px;
+    text-align: center;
+}
