@@ -1,6 +1,7 @@
-const minhaVar = 1;
-const MinhaVar = "texto";
-const minhavar = "3";
-const MINHAVAR = 2;
+const num = '123'
 
-console.log(minhaVar, MinhaVar, minhavar, MINHAVAR)
+for (let i = 0; i < num.length; i++) {
+    const element = num[i];
+    
+    console.log(element)
+}
