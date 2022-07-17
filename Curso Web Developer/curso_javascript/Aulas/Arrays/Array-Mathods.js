@@ -28,3 +28,8 @@ console.log()
 console.log('reverse: ')
 console.log(numericArray.reverse())
 console.log()
+
+//concat
+console.log('concat: ')
+console.log(array.concat(numericArray))
+console.log()
