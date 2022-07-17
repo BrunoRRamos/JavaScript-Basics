@@ -11,4 +11,4 @@ const search = (name) => {
     
 }
 
-console.log(search('Juan'))
+console.log(search('Pedro'))
