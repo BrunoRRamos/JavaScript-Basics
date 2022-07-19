@@ -48,6 +48,7 @@ const returnUser = (userCpf, valTarget) => {
         default:
             return userToReturn[0];
     }
+    
     } catch (UserNotFound) {
         console.error('User not found.')
     }
