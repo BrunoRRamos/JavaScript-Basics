@@ -40,3 +40,4 @@ console.log(objectTest)
 
 delete objectTest.salary
 console.log(objectTest)
+
