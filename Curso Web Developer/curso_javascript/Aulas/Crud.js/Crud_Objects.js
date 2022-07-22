@@ -27,30 +27,33 @@ const deleteUser = (userCpf = '', id = null) => {
         }
     })
 }
+
 const captalize = string => {
     return string[0].toUpperCase() + string.substring(1)
 }
 
-const returnUser = (userCpf, valTarget) => {
-    try {
-        const userToReturn = usersDataBase.filter(user => user.cpf === userCpf)
-
-    switch (valTarget) {
-        case "name":
-            return `${captalize(valTarget)}: ${userToReturn[0].name}`
-        
-        case "age":
-            return `${captalize(valTarget)}: ${userToReturn[0].age}`
-        
-        case "id":
-            return `${captalize(valTarget)}: ${userToReturn[0].id}`
-
-        default:
-            return userToReturn[0];
+const returnData = objectName => {
+    for (const key in objectName) {
+        return `${key} : ${objectName[key]}`
     }
-    
-    } catch (UserNotFound) {
-        console.error('User not found.')
+}
+
+const returnValTarget = (objectName, target) => {
+    for (const key in objectName) {
+        if (key === target) {
+            return `${objectName[key]}`
+        }
+    }
+}
+
+const returnUser = (userCpf, valTarget = "") => {
+    const userToReturn = usersDataBase.filter(user => user.cpf === userCpf)
+    const runObject = userToReturn[0]
+
+    if (valTarget === ""){
+        return returnData(runObject)
+    } else {
+        return returnValTarget(runObject, valTarget)
     }
 }
 

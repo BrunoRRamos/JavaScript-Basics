@@ -1,6 +1,7 @@
 //Objects Basic Structure:
 // const <name> = {key: val, ... key: val}
 const objectTest = {name: 'Bruno', age: 19, email: 'testmail@gamail.com'}
+const objectTest2 = {name: 'Julia', age: 34, email: 'juliatest@gmail.com'}
 
 
 //Returning an object key:
@@ -41,3 +42,28 @@ console.log(objectTest)
 delete objectTest.salary
 console.log(objectTest)
 
+//For In
+
+//for (const key in object) {
+//    BLOCK
+//}
+//Key -> key; obeject[key] -> key value
+
+for (const key in objectTest) {
+    console.log(`${key} : ${objectTest[key]}`)
+}
+
+//Spreding Syntax
+//Const spredName = [... ArrayName[index].key, ->]
+
+objectArray = [objectTest, objectTest2]
+const spredTest = [...Object.values(objectArray[0]), ...Object.values(objectArray[1])]
+console.log(spredTest)
+
+//JSON Conversion
+
+//JSON to Object
+//const ObjectToJASON = JASON.parse(objectTest)
+
+//Object to JSON
+const JASON_ToObject = JSON.stringify("JASON_NAME")
