@@ -65,7 +65,7 @@ const returnUser = (userCpf, valTarget = "") => {
     }
 }
 
-const updateData = (userId, target, newVal) => {
+const updateUser = (userId, target, newVal) => {
     const modifyTarget = searchById(userId)[0]
     console.log(modifyTarget)
     
@@ -92,5 +92,5 @@ console.log(usersDataBase)
 
 console.log(returnUser('111.111.111-11', 'name'))
 
-updateData(0, 'name', 'Jorge')
+updateUser(0, 'name', 'Jorge')
 console.log(usersDataBase)
