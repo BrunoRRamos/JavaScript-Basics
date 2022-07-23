@@ -46,9 +46,17 @@ const returnValTarget = (objectName, target) => {
     }
 }
 
+const searchByCpf = data => {
+    const userToReturn = usersDataBase.filter(user => user.cpf === data)
+    return userToReturn
+}
+
+const searchById = data => {
+    const userToReturn = usersDataBase.filter(user => user.id === data)
+    return userToReturn
+}
 const returnUser = (userCpf, valTarget = "") => {
-    const userToReturn = usersDataBase.filter(user => user.cpf === userCpf)
-    const runObject = userToReturn[0]
+    const runObject = searchByCpf(userCpf)[0]
 
     if (valTarget === ""){
         return returnData(runObject)
@@ -57,13 +65,32 @@ const returnUser = (userCpf, valTarget = "") => {
     }
 }
 
+const updateData = (userId, target, newVal) => {
+    const modifyTarget = searchById(userId)[0]
+    console.log(modifyTarget)
+    
+    if (target === "name") {
+        modifyTarget.name = newVal
+
+    } else if (target === "cpf") {
+        modifyTarget.cpf = newVal
+
+    } else {
+        modifyTarget.age = newVal
+    }
+}
+
 newUser('Bruno', 19, '111.111.111-11')
 newUser('Maria', 34, '222.222.222-22')
+newUser('Jubileu', 39, '333.333.333-33')
 
 console.log(usersDataBase)
 
-deleteUser('', 1)
+deleteUser('333.333.333-33')
 
 console.log(usersDataBase)
 
 console.log(returnUser('111.111.111-11', 'name'))
+
+updateData(0, 'name', 'Jorge')
+console.log(usersDataBase)
