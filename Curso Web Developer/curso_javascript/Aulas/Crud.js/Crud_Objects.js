@@ -60,8 +60,10 @@ const returnUser = (userCpf, valTarget = "") => {
 
     if (valTarget === ""){
         return returnData(runObject)
+
     } else {
         return returnValTarget(runObject, valTarget)
+        
     }
 }
 
