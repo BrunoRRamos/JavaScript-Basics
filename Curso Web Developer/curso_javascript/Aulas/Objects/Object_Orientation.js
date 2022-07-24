@@ -34,5 +34,4 @@ class Programer extends Student {
 }
 
 const brunoProg = new Programer('Bruno', 19, 'UFCG', 'Computer Science', 'JavaScript')
-
 console.log(brunoProg)
