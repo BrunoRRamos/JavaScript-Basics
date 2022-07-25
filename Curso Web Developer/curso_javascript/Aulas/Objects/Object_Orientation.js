@@ -13,7 +13,7 @@ class Student {
         }
 
         returnCourse() {
-            return this.course
+            console.log(this.course)
         }
     }
 
