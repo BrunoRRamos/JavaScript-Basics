@@ -62,8 +62,7 @@ const returnUser = (userCpf, valTarget = "") => {
         return returnData(runObject)
 
     } else {
-        return returnValTarget(runObject, valTarget)
-        
+        return returnValTarget(runObject, valTarget)   
     }
 }
 
