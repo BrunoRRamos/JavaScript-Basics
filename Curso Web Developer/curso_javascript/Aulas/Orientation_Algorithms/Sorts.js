@@ -22,10 +22,8 @@ function insertionSort(array) {
 
         while (array[actual] < array[actual - 1]) {
             let aux = array[actual]
-
             array[actual] = array[actual - 1]
             array[actual - 1] = aux
-
             actual--
         }
     }
