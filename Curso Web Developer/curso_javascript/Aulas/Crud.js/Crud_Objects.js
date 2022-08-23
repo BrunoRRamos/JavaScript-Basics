@@ -1,12 +1,13 @@
 const usersDataBase = []
 
 //Add a new User:
-const newUser = (userName, userAge, userCpf) => {
+const newUser = (userName, userAge, userCpf, isAdmin=false) => {
     let newUserObject = {
         name: userName,
         age: userAge,
         cpf: userCpf,
-        id: usersDataBase.length
+        id: usersDataBase.length,
+        admin: isAdmin
     }
     usersDataBase.push(newUserObject)
 }
@@ -69,7 +70,7 @@ const returnUser = (userCpf, valTarget = "") => {
 const updateUser = (userId, target, newVal) => {
     const modifyTarget = searchById(userId)[0]
     console.log(modifyTarget)
-    
+
     if (target === "name") {
         modifyTarget.name = newVal
 
@@ -81,8 +82,8 @@ const updateUser = (userId, target, newVal) => {
     }
 }
 
-newUser('Bruno', 19, '111.111.111-11')
-newUser('Maria', 34, '222.222.222-22')
+newUser('Bruno', 19, '111.111.111-11', true)
+newUser('Maria', 34, '222.222.222-22', true)
 newUser('Jubileu', 39, '333.333.333-33')
 
 console.log(usersDataBase)
