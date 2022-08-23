@@ -1,6 +1,6 @@
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 
-function createPhoneNumber(numbers){
+function createPhoneNumber(array){
     let finalReturn = '('
     for (let i = 0; i < 3; i++) {
         const element = array[i];
@@ -19,6 +19,6 @@ function createPhoneNumber(numbers){
         finalReturn += element
     }
     return finalReturn
-  }
+}
 
  console.log(createPhoneNumber(array))
