@@ -1,26 +1,24 @@
-const edFolha = [
-    {
-        name: 'JavaScript',
-        price: 20
-    },
-    {
-        name: 'Python',
-        price: 15
-    },
-    {
-        name: 'Typescript',
-        price: 30
-    },
-    {
-        name: 'Sass',
-        price: 10
-    },
-    {
-        name: 'PostGree',
-        price: 60
-    }
-]
+array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 
-edFolha.forEach(element => {
-    console.log(element.price)
-});
+function createPhoneNumber(numbers){
+    let finalReturn = '('
+    for (let i = 0; i < 3; i++) {
+        const element = array[i];
+        finalReturn += element
+    }
+    finalReturn += ') '
+
+    for (let i = 3; i < 6; i++) {
+        const element = array[i];
+        finalReturn += element
+    }
+    finalReturn += '-'
+
+    for (let i = 6; i < array.length; i++) {
+        const element = array[i];
+        finalReturn += element
+    }
+    return finalReturn
+  }
+
+ console.log(createPhoneNumber(array))
