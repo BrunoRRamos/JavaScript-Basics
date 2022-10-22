@@ -149,6 +149,41 @@ const extremeArray = [
         name: 'Clojure',
         price: 110
     }
-
 ]
-module.exports = {edFolha, edData, extremeArray}
+
+const arrSorted = [
+    {
+        name: 'JavaScript',
+        price: 20
+    },
+    {
+        name: 'Python',
+        price: 25
+    },
+    {
+        name: 'Typescript',
+        price: 30
+    },
+    {
+        name: 'Sass',
+        price: 40
+    },
+    {
+        name: 'PostGree',
+        price: 60
+    },
+    {
+        name: 'MongoDB',
+        price: 72
+    },
+    {
+        name: 'GraphQL',
+        price: 78
+    },
+    {
+        name: 'Java',
+        price: 84
+    }
+]
+
+module.exports = {edFolha, edData, extremeArray, arrSorted}

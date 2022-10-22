@@ -1,4 +1,4 @@
-const {edFolha, edData, extremeArray} = require('./Variables')
+const {extremeArray} = require('./Variables')
 
 function encontraMenores(reference, arr) {
     let menores = 0;
@@ -35,5 +35,48 @@ function sliceOnReference(arr) {
     }
     return arr;
 }
-console.log(sliceOnReference(edFolha))
-//console.log(encontraMenores(extremeArray[8], extremeArray));
+
+
+//Quick Sort
+
+function quickSort(arr, left, right) {
+    if(arr.length > 1) {
+        let actualIndex = particiona(arr, left, right)
+
+        if (left < actualIndex - 1) {
+            quickSort(arr, left, actualIndex - 1)
+        }
+
+        if (actualIndex < right) {
+            quickSort(arr, actualIndex, right)
+        }
+    }
+
+    return arr;
+}
+
+function particiona(arr, left, right) {
+    let pivo = arr[Math.floor((left + right) / 2)];
+    let actualLeft = left;
+    let actualRight = right;
+
+    while (actualLeft <= actualRight) {
+        while (arr[actualLeft].price < pivo.price) {
+            actualLeft++;
+        }
+
+        while (arr[actualRight].price > pivo.price) {
+            actualRight--;
+        }
+
+        if (actualLeft <= actualRight) {
+            replaceArr(arr, actualLeft, actualRight);
+            actualLeft++;
+            actualRight--;
+        }
+    }
+    return actualLeft;
+}
+
+const arrSorted = quickSort(extremeArray, 0, extremeArray.length - 1);
+module.exports = {arrSorted};
