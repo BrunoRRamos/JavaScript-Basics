@@ -1,6 +1,5 @@
 const {arrSorted} = require('./Variables')
 
-
 function binaryScearch (arr, fromIndex, toIndex, target) {
     const middle = Math.floor((fromIndex + toIndex) / 2);
     const actual = arr[middle];
