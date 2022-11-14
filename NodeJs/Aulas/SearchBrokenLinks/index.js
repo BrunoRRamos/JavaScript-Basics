@@ -5,14 +5,15 @@ function catchError(error) {
     throw new Error(chalk.red(error.code, "Reading Error"));
 }
 
-function catchArchive(achiveRoute) {
-    const encoding = 'utf-8'
-    fs.readFile(achiveRoute, encoding, (error, textFile) => {
-        if (error) {
-            catchError(error);
-        }
-        console.log(chalk.green(textFile));
-    });
+//Async and Await.
+async function catchArchiveAsync(archiveRoute) {
+    const encoding = 'utf-8';
+    try {
+        const text = await fs.promises.readFile(archiveRoute, encoding);
+    console.log(chalk.green(text))
+    } catch (error) {
+        catchError(error);
+    }
 }
-
-catchArchive('./text.md')
+const archiveRoute = './text.md';
+catchArchiveAsync(archiveRoute)
