@@ -1,2 +1,2 @@
-# Aprendendo-HTML-CSS-JS
+# Learning-JS
 * All i made in my JavaScript learning.
